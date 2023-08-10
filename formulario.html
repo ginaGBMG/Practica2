@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" media="screen" href="./styles.css">
+  <title>Formulario</title>
+</head>
+<body>
+  <h1>Bienvenidos a mi fiesta</h1>
+  <h2>Por favor, confirmar asistencia:</h2>
+
+<!-- Añadiendo complementos: alertas -->
+  <form class="formulario">
+    <!-- Nombre  -->
+    <br>
+    <label for="txtNombre" class="input">Nombre</label>
+    <input type="text" id="txtNombre" class="form-control" placeholder="Nombre" required="" autofocus="" >
+    <br/>
+    <div id="alertValidacionesTextoNombre">
+      <p id="alertNombre"></p>
+    </div>
+    <!-- Edad  -->
+    <label for="txtAge" class="input">Edad</label>
+    <br>
+    <input type="number" id="txtAge" class="form-control" placeholder="Edad" required="" autofocus="">
+    <br/>
+    <div id="alertValidacionesTextoAge">
+      <p id="alertAge"></p>
+  </div>
+    <!-- Nacionalidad -->
+    <label for="txtNationality" class="input">Nacionalidad</label>
+    <select class="form-select form-control" placeholder="Nacionalidad" id="listNationality" required>
+      <option value="ar">Argentina</option>
+      <option value="mx">Mexicana</option>
+      <option value="per">Peruana</option>
+      <option value="vnzl">Venezolana</option>
+    </select>
+    <br>
+    <div id="alertValidacionesListNationality">
+      <p id="listNationality"></p>
+  </div>
+    <br/>
+    <input type="submit">
+  </form>
+  <div>
+    <h2>Lista de invitados</h2>
+  </div>
+
+  <script src="../formulario.js"></script>
+<!-- <script src="/formulario.js"></script> -->
+</body>
+</html>
