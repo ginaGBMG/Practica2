@@ -1,20 +1,34 @@
-//Variables para validación de html 
+// Cambios y funciones
+// 1. Registrar invitados de la fiesta
+// 2. Correción de funciones
+// 3. Funcionamiento
+
+// Significado
+// NEBP: No Es Buena Practica
+
+
+//Variables para validación de datos
+let form = document.getElementById("formulario");
 let txtNombre = document.getElementById("txtNombre");
 let txtAge = document.getElementById("txtAge");
+let txtNationality = document.getElementById("txtNationality");
 
 // Alertas para datos incorrectos 
+let alertForm = document.getElementById("alerForm");
 let alertNombre = document.getElementById("alertNombre");
 let alertAge = document.getElementById("alertAge");
 
 // Div para alertas
+let alertValidacionesTextForm = document.getElementById("alertValidacionesTextForm");
 let alertValidacionesTextNombre = document.getElementById("alertValidacionesTextNombre");
 let alertValidacionesTextAge = document.getElementById("alertValidacionesTextAge");
 
-var formulario = document.querySelector("#form")
+var formulario = document.querySelector("formulario")
 
 formulario.onsubmit = function(e) {
 
-  e.prevent();
+ //sintasix 
+  e.preventDefault();
   //var = let - (var es otra forma de decir let)
   var n = formulario.elements[3]
   var e = formulario.elements[18 < 100]
@@ -30,8 +44,8 @@ formulario.onsubmit = function(e) {
 
   if (nombre.length === 0) {
      n.classList.add("error")  
-     }
- if (edad < 18 || edad > 80) {
+     } 
+ if (edad > 18 || edad > 80) {
  e.classList.add("error") 
 }
 
@@ -41,6 +55,7 @@ formulario.onsubmit = function(e) {
    agregarInvitado(nombre, edad, nacionalidad)
    }
 }
+
 
 //Orejitas para validar el nombre cada vez que el usuario use el campo
 txtNombre.addEventListener("keyup", function (event) {
@@ -62,14 +77,16 @@ txtNombre.addEventListener("keyup", function (event) {
   }
 
 });
+// repetido al final
+// var botonBorrar = document.createElement("button")
+// botonBorrar.textContent = "Eliminar invitado"
+// botonBorrar.id = "boton-borrar"
 
-var botonBorrar = document.createElement("button")
-botonBorrar.textContent = "Eliminar invitado"
-botonBorrar.id = "boton-borrar"
 //var corteLinea = document.createElement("br")
 document.body.appendChild(corteLinea)
 document.body.appendChild(botonBorrar);
 
+// Validación para que solo permita nombres de longitud (3 - 10) caracteres.
 function agregarInvitado(nombre, edad, nacionalidad) {
 
   if (nacionalidad === "ar") {

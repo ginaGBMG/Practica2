@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" media="screen" href="./styles.css">
+    <!-- href="./styles.css"> cambio -->
   <title>Formulario</title>
 </head>
 <body>
@@ -15,18 +16,18 @@
 <!-- Añadiendo complementos: alertas -->
   <form class="formulario">
     <!-- Nombre  -->
-    <br>
+    <!-- <br> NEBP-->
     <label for="txtNombre" class="input">Nombre</label>
     <input type="text" id="txtNombre" class="form-control" placeholder="Nombre" required="" autofocus="" >
-    <br/>
+    <!-- <br/> -->
     <div id="alertValidacionesTextoNombre">
       <p id="alertNombre"></p>
     </div>
     <!-- Edad  -->
     <label for="txtAge" class="input">Edad</label>
-    <br>
+    <!-- <br> -->
     <input type="number" id="txtAge" class="form-control" placeholder="Edad" required="" autofocus="">
-    <br/>
+    <!-- <br/> -->
     <div id="alertValidacionesTextoAge">
       <p id="alertAge"></p>
   </div>
@@ -46,9 +47,10 @@
     <input type="submit">
   </form>
   <div>
+    <input type="text" id="ListadeInvitados" class="form-control" placeholder="invitados" required="" autofocus="" >
     <h2>Lista de invitados</h2>
+    
   </div>
-
   <script src="../formulario.js"></script>
 <!-- <script src="/formulario.js"></script> -->
 </body>
